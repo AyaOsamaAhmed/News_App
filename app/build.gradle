@@ -1,8 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdk 32
@@ -31,6 +35,10 @@ android {
         jvmTarget = '1.8'
     }
 
+    buildTypes.each {
+        it.buildConfigField 'String', 'SERVER_HOST', server_host
+    }
+
     buildFeatures{
         dataBinding = true
     }
@@ -46,8 +54,20 @@ dependencies {
     implementation 'androidx.databinding:databinding-runtime:7.2.1'
 
 
+ 
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+
     def room_version = "2.2.5"
     def nav_version = "2.3.0-beta01"
+
+    //ktor
+    def ktorVersion = '1.6.7'
+    implementation "io.ktor:ktor-client-core:$ktorVersion"
+    implementation "io.ktor:ktor-client-android:$ktorVersion"
+    implementation "io.ktor:ktor-client-okhttp:$ktorVersion"
+    implementation "io.ktor:ktor-client-json:$ktorVersion"
+    implementation "io.ktor:ktor-client-serialization:$ktorVersion"
+    implementation "io.ktor:ktor-client-logging-jvm:$ktorVersion"
 
 
     //coroutines
