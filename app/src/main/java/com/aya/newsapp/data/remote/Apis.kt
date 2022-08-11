@@ -4,6 +4,6 @@ import com.aya.newsapp.domain.response.MainResponse
 
 interface Apis {
 
-    suspend fun allNews( keyword:String):MainResponse
+    suspend fun allNews( keyword:String):MainResponse?
 
 }

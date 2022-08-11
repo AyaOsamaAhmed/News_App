@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aya.newsapp.domain.repositories.MainRepo
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -15,9 +16,12 @@ class HomeViewModel : ViewModel() {
         AllNews("keyword")
     }
 
+    val coroutineExceptionHandler = CoroutineExceptionHandler{_, throwable ->
+        throwable.printStackTrace()
+    }
 
     fun AllNews(keyword: String){
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO ) {
             requestBannerLiveData.postValue(MainRepo.allNews(keyword))
         }
     }

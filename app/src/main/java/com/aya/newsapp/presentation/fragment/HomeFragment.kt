@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.aya.newsapp.R
 import com.aya.newsapp.databinding.HomeFragmentBinding
+import com.aya.newsapp.domain.response.MainResponse
 import com.aya.newsapp.presentation.ui.MainActivity
 import com.aya.newsapp.presentation.viewModel.HomeViewModel
 
@@ -34,7 +36,10 @@ class HomeFragment : Fragment() {
         binding = HomeFragmentBinding.inflate(inflater , container , false)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
+        viewModel.requestBannerLiveData.observe(viewLifecycleOwner, Observer {
+            val data = it as MainResponse
 
+        })
 
         return binding.root
     }

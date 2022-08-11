@@ -2,8 +2,9 @@ package com.aya.newsapp.domain.response
 
 import com.aya.newsapp.domain.model.ArticlesModel
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-//@Serializable
+@Serializable
 data class MainResponse (
 
     @SerialName("status")
@@ -12,7 +13,6 @@ data class MainResponse (
     val totalResults: Int ,
     @SerialName("articles")
     val articles: ArrayList<ArticlesModel>
-
 
 
 

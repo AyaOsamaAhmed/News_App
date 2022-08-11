@@ -8,14 +8,15 @@ import com.aya.newsapp.domain.response.MainResponse
 object MainRepo {
 
     suspend fun allNews(keyword: String): MainResponse?  {
-        return try {
-            Log.d("MainRepo", "Response  ${  ApisServicesImpl.allNews(keyword)}")
-            ApisServicesImpl.allNews(keyword)
+        return   try {
+
+           ApisServicesImpl.allNews(keyword)
 
         } catch (e:  ClientRequestException) {
             Log.d("MainRepo", "Response exception ${e.message}")
             null
         }
+
     }
 
 

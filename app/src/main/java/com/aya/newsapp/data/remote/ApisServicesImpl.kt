@@ -10,8 +10,8 @@ object ApisServicesImpl : Apis {
         KtorClient.getInstance
     }
 
-    override suspend fun allNews(keyword: String): MainResponse {
-        return httpClient.get( path= "/v2/everything") {
+    override suspend fun allNews(keyword: String): MainResponse? {
+      return httpClient.get(  path = "v2/everything") {
             parameter("q", keyword)
             parameter("apiKey", API_KEY)
         }

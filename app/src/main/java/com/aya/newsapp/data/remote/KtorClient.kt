@@ -18,11 +18,11 @@ object KtorClient {
 
     private val client = HttpClient(Android) {
         defaultRequest {
-            host = BASE_URL
+             host = BASE_URL
             url {
                 protocol = URLProtocol.HTTPS
             }
-            header(AUTHORIZATION_HEADER, "BEARER $API_KEY")
+        //   header(AUTHORIZATION_HEADER, "BEARER $API_KEY")
         }
         install(JsonFeature) {
             serializer = KotlinxSerializer(
