@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">News App</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="fav">Favourite</string>
+    <string name="setting">Setting</string>
+    <string name="news">News</string>
+    <string name="last_news">Latest news</string>
 </resources>

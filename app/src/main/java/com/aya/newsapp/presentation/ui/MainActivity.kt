@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.aya.newsapp.R
 import com.aya.newsapp.databinding.ActivityMainBinding
 
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         navController= Navigation.findNavController(this,R.id.homeframelayout)
 
+        setupWithNavController(binding.bottomNav,navController)
 
     }
 }

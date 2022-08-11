@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.13219424460431656" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/details_fragment.xml" value="0.1" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/home_fragment.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/draw_corner_background.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/item_news.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.35520833333333335" />
       </map>
     </option>
   </component>
@@ -14,5 +20,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.35520833333333335" />
+      </ProjectState>
+    </option>
   </component>
 </project>
