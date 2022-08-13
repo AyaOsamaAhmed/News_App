@@ -10,6 +10,6 @@ data class ArticlesModel (
     val description : String?,
     val url : String?,
     val urlToImage : String?,
-    val publishedAt:String? ,
+    var publishedAt:String? ,
     val content : String?
 )

@@ -8,8 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aya.newsapp.BR
 import com.aya.newsapp.databinding.ItemNewsBinding
 import com.aya.newsapp.domain.model.ArticlesModel
+import com.aya.newsapp.presentation.interfaces.onClickDetails
+import android.text.format.DateUtils
+import com.aya.newsapp.utils.getTimeAgo
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
-class NewsAdapter  :  ListAdapter<ArticlesModel, NewsAdapter.ViewHolder>(ArticlesModelDiffCallback()){
+
+class NewsAdapter(val onClick : onClickDetails)  :  ListAdapter<ArticlesModel, NewsAdapter.ViewHolder>(ArticlesModelDiffCallback()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -19,7 +26,25 @@ class NewsAdapter  :  ListAdapter<ArticlesModel, NewsAdapter.ViewHolder>(Article
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = getItem(position)
+        if(item.urlToImage != null) {
+
+            val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+            sdf.setTimeZone(TimeZone.getTimeZone("GMT"))
+            try {
+                val time: Long = sdf.parse("2016-01-24T16:00:00.000Z").getTime()
+                val now = System.currentTimeMillis()
+                val ago = DateUtils.getRelativeTimeSpanString(time, now, DateUtils.MINUTE_IN_MILLIS)
+                item.publishedAt = getTimeAgo(item.publishedAt) //ago.toString()
+            } catch (e: ParseException) {
+                e.printStackTrace()
+            }
+
             holder.bind(item)
+
+        }
+        holder.itemRowBinding.card.setOnClickListener {
+            onClick.onClick(item)
+        }
     }
 
     class ArticlesModelDiffCallback :

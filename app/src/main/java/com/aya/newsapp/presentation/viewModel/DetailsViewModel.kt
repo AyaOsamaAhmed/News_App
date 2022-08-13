@@ -7,4 +7,6 @@ class DetailsViewModel : ViewModel() {
     init {
 
     }
+
+
 }
