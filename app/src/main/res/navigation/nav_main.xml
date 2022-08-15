@@ -17,8 +17,27 @@
     </fragment>
 
     <fragment
-        android:id="@+id/DetailsFragment"
-       android:name="com.aya.newsapp.presentation.fragment.DetailsFragment"
-       tools:layout="@layout/details_fragment"
+        android:id="@+id/BookMarksFragment"
+       android:name="com.aya.newsapp.presentation.fragment.BookMarksFragment"
+       tools:layout="@layout/book_marks_fragment"
         />
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.aya.newsapp.presentation.fragment.SearchFragment"
+        tools:layout="@layout/search_fragment"
+        />
+
+    <fragment
+        android:id="@+id/SettingFragment"
+        android:name="com.aya.newsapp.presentation.fragment.SettingFragment"
+        tools:layout="@layout/setting_fragment"
+        />
+
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.aya.newsapp.presentation.fragment.DetailsFragment"
+        tools:layout="@layout/details_fragment"
+        />
+
 </navigation>

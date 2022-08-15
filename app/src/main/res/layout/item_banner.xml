@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
->
+    xmlns:tools="http://schemas.android.com/tools">
         <data>
                 <variable
                     name="model"
-                    type="String" />
+                    type="com.aya.newsapp.domain.model.ArticlesTable" />
         </data>
 <RelativeLayout
     android:orientation="vertical"
@@ -34,7 +33,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +70,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/app_name"
+                            android:text="@{model.title}"
+                            tools:text="@string/app_name"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_10sdp"
                             android:layout_margin="@dimen/_10sdp"

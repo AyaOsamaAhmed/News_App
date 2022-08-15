@@ -1,6 +1,5 @@
 package com.aya.newsapp.data.remote
 
-import com.aya.newsapp.utils.Constant.API_KEY
 import com.aya.newsapp.utils.Constant.BASE_URL
 import io.ktor.client.*
 import io.ktor.client.engine.android.*

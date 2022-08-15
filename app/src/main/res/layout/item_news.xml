@@ -6,7 +6,7 @@
     <data>
         <variable
             name="model"
-            type="com.aya.newsapp.domain.model.ArticlesModel" />
+            type="com.aya.newsapp.domain.model.ArticlesTable" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

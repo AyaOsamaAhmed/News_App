@@ -12,10 +12,14 @@ import com.aya.newsapp.R
 import com.aya.newsapp.databinding.ItemBannerBinding
 import com.aya.newsapp.databinding.ItemNewsBinding
 import com.aya.newsapp.domain.model.ArticlesModel
+import com.aya.newsapp.domain.model.ArticlesTable
+import com.aya.newsapp.presentation.interfaces.onClickDetails
 import com.bumptech.glide.Glide
 import com.example.moeidbannerlibrary.banner.BannerLayout
 
-class BannerAdapter (val context: Context,private val urlList: ArrayList<ArticlesModel>) :
+class BannerAdapter (val context: Context,
+                    val onClickDetails: onClickDetails
+                    ,private val urlList: ArrayList<ArticlesTable>) :
         RecyclerView.Adapter<BannerAdapter.subViewHolder?>() {
 
 
@@ -26,15 +30,20 @@ class BannerAdapter (val context: Context,private val urlList: ArrayList<Article
         }
 
         override fun onBindViewHolder(holder: subViewHolder, position: Int) {
+            val data = urlList[position]
             val item = urlList[position].urlToImage
          if(item != null && position <= 4) {
-             holder.bind(item)
+             holder.bind(data)
              Log.d("banner adapter",item)
             Glide.with(context).load(item).into(holder.itemRowBinding.image)
 
          }
-            holder.itemRowBinding.image.setOnClickListener {
 
+            holder.itemRowBinding.bookMark.setOnClickListener {
+                onClickDetails.onClickBookMarks(data)
+            }
+            holder.itemRowBinding.image.setOnClickListener {
+                onClickDetails.onClick(data)
             }
         }
 
