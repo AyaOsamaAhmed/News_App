@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.aya.newsapp.databinding.DetailsFragmentBinding
+import com.aya.newsapp.domain.model.ArticlesTable
 import com.aya.newsapp.presentation.viewModel.DetailsViewModel
 
 class DetailsFragment : Fragment() {
@@ -23,7 +24,10 @@ class DetailsFragment : Fragment() {
         binding = DetailsFragmentBinding.inflate(inflater , container , false)
         viewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
 
-       // binding.model =
+        var arg = arguments?.let { DetailsFragmentArgs.fromBundle(it) }
+
+        val modelDetails = ArticlesTable(urlToImage = arg?.img, title = arg?.title, description = arg?.desc, author = null, bookMark = 0, content = null, publishedAt = null, url = null)
+        binding.model = modelDetails
 
         return binding.root
     }

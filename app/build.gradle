@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.31'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'
 }
 
 apply plugin: 'kotlin-android'

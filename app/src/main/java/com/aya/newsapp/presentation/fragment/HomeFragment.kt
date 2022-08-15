@@ -72,8 +72,7 @@ class HomeFragment : Fragment() , onClickDetails {
     }
 
     override fun onClick(artical: ArticlesTable) {
-
-        navController.navigate(R.id.action_HomeFragment_to_DetailsFragment)
+        navController.navigate(HomeFragmentDirections.actionHomeFragmentToDetailsFragment(artical.urlToImage.toString(),artical.title.toString(),artical.description.toString()))
     }
 
     override  fun onClickBookMarks(artical: ArticlesTable) {

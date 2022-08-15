@@ -20,16 +20,22 @@
         android:id="@+id/BookMarksFragment"
        android:name="com.aya.newsapp.presentation.fragment.BookMarksFragment"
        tools:layout="@layout/book_marks_fragment"
-        />
+        >
     <action
         android:id="@+id/action_BookMarksFragment_to_DetailsFragment"
         app:destination="@id/DetailsFragment"
         />
+    </fragment>
     <fragment
         android:id="@+id/SearchFragment"
         android:name="com.aya.newsapp.presentation.fragment.SearchFragment"
         tools:layout="@layout/search_fragment"
-        />
+        >
+        <action
+            android:id="@+id/action_SearchFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment"
+            />
+    </fragment>
 
     <fragment
         android:id="@+id/SettingFragment"
@@ -43,6 +49,18 @@
         tools:layout="@layout/details_fragment"
         >
 
+        <argument
+            android:name="img"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="desc"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

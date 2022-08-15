@@ -57,7 +57,8 @@ class BookMarksFragment : Fragment() ,onClickDetails {
     }
 
     override fun onClick(artical: ArticlesTable) {
-        navController.navigate(R.id.action_BookMarksFragment_to_DetailsFragment)
+        navController.navigate(BookMarksFragmentDirections.actionBookMarksFragmentToDetailsFragment(artical.urlToImage.toString(),artical.title.toString(),artical.description.toString()))
+
     }
 
     override fun onClickBookMarks(artical: ArticlesTable) {
