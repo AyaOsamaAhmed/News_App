@@ -5,25 +5,26 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.13219424460431656" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/drawable-v24/ic_bookmark_white.xml" value="0.19537037037037036" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/draw_border_medium_white.xml" value="0.2128205128205128" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_bookmark.xml" value="0.21614583333333334" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_bookmark_choose.xml" value="0.19722222222222222" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_chat.xml" value="0.12222222222222222" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_eye.xml" value="0.12222222222222222" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_next.xml" value="0.12222222222222222" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/drawable/ic_reply.xml" value="0.12222222222222222" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/layout/book_marks_fragment.xml" value="0.1" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/details_fragment.xml" value="0.15" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/home_fragment.xml" value="0.2" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/item_banner.xml" value="0.25" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/layout/item_news.xml" value="0.2" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/layout/search_fragment.xml" value="0.2" />
+        <entry key="..\:/projects/NewsApp/app/src/main/res/layout/setting_fragment.xml" value="0.1" />
         <entry key="..\:/projects/NewsApp/app/src/main/res/menu/menu.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/draw_corner_background.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/book_marks_fragment.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/details_fragment.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.17325227963525835" />
-        <entry key="app/src/main/res/layout/item_banner.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/item_news.xml" value="0.35520833333333335" />
-        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/setting_fragment.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.35520833333333335" />
       </map>
     </option>

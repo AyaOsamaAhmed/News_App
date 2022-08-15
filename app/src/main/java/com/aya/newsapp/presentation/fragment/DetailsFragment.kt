@@ -23,6 +23,7 @@ class DetailsFragment : Fragment() {
         binding = DetailsFragmentBinding.inflate(inflater , container , false)
         viewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
 
+       // binding.model =
 
         return binding.root
     }

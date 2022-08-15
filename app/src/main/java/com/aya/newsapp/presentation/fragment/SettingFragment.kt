@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.aya.newsapp.databinding.DetailsFragmentBinding
@@ -21,6 +22,13 @@ class SettingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = SettingFragmentBinding.inflate(inflater , container , false)
+
+        binding.drak.setOnClickListener {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        }
+        binding.light.setOnClickListener {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
 
         return binding.root
     }

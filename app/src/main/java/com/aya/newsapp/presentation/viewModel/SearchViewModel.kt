@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel() {
 
-    var requestBannerLiveData = MutableLiveData<Any>()
+    var requestSearchLiveData = MutableLiveData<Any>()
 
     init {
         AllNews("keyword")
@@ -22,7 +22,7 @@ class SearchViewModel : ViewModel() {
 
     fun AllNews(keyword: String){
         viewModelScope.launch(Dispatchers.IO ) {
-            requestBannerLiveData.postValue(MainRepo.allNews(keyword))
+            requestSearchLiveData.postValue(MainRepo.allNews(keyword))
         }
     }
 

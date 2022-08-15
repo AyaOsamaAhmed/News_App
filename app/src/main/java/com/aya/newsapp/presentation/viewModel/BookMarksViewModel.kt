@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aya.newsapp.data.local.NewsDataBase
+import com.aya.newsapp.domain.model.ArticlesTable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -13,7 +14,13 @@ class BookMarksViewModel : ViewModel() {
 
     fun getAllBookMark(instance: NewsDataBase){
         viewModelScope.launch(Dispatchers.IO ) {
-           // requestBookMarksiveData.value =  instance.newsDataBaseDao.get()
+            requestBookMarksiveData.postValue(instance.newsDataBaseDao.getAllNews())
+        }
+    }
+
+    fun deleteBookMark(instance: NewsDataBase,news: ArticlesTable){
+        viewModelScope.launch(Dispatchers.IO ) {
+                instance.newsDataBaseDao.deleteNews(news)
         }
     }
 

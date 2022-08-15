@@ -43,8 +43,8 @@ class NewsDatabaseTest {
     suspend fun insertAndGetNews() {
         val news = ArticlesTable(0,"author","title","desc",null,null,"2022-01-01",null,1)
         newsDataBaseDao.insertNews(news)
-     //   val tonews = newsDataBaseDao.getAllNews()
-     //   assertEquals(tonews, 1)
+        val tonews = newsDataBaseDao.getAllNews()
+        assertEquals(tonews, 1)
     }
 
 }

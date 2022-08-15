@@ -72,6 +72,7 @@ class HomeFragment : Fragment() , onClickDetails {
     }
 
     override fun onClick(artical: ArticlesTable) {
+
         navController.navigate(R.id.action_HomeFragment_to_DetailsFragment)
     }
 

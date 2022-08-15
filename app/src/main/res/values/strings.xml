@@ -7,4 +7,6 @@
     <string name="news">News</string>
     <string name="last_news">Latest news</string>
     <string name="book_marks">Book Marks</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>

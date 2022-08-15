@@ -9,6 +9,7 @@ import com.aya.newsapp.BR
 import com.aya.newsapp.databinding.ItemNewsBinding
 import com.aya.newsapp.presentation.interfaces.onClickDetails
 import android.text.format.DateUtils
+import com.aya.newsapp.R
 import com.aya.newsapp.domain.model.ArticlesTable
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -16,6 +17,7 @@ import java.util.*
 
 
 class NewsAdapter(val onClick : onClickDetails)  :  ListAdapter<ArticlesTable, NewsAdapter.ViewHolder>(ArticlesModelDiffCallback()){
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -25,8 +27,10 @@ class NewsAdapter(val onClick : onClickDetails)  :  ListAdapter<ArticlesTable, N
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = getItem(position)
-        if(item.urlToImage != null) {
+        if(item.bookMark == 1)
+            holder.itemRowBinding.bookMark.setImageResource(R.drawable.ic_bookmark_choose)
 
+        if(item.urlToImage != null) {
             val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
             sdf.setTimeZone(TimeZone.getTimeZone("GMT"))
             try {
@@ -54,7 +58,7 @@ class NewsAdapter(val onClick : onClickDetails)  :  ListAdapter<ArticlesTable, N
     class ArticlesModelDiffCallback :
         DiffUtil.ItemCallback<ArticlesTable>() {
         override fun areItemsTheSame(oldItem: ArticlesTable, newItem: ArticlesTable): Boolean {
-            TODO("Not yet implemented")
+            return oldItem.newsId == newItem.newsId
         }
 
         override fun areContentsTheSame(oldItem: ArticlesTable, newItem: ArticlesTable): Boolean {

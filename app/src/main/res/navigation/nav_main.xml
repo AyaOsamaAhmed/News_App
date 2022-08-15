@@ -21,7 +21,10 @@
        android:name="com.aya.newsapp.presentation.fragment.BookMarksFragment"
        tools:layout="@layout/book_marks_fragment"
         />
-
+    <action
+        android:id="@+id/action_BookMarksFragment_to_DetailsFragment"
+        app:destination="@id/DetailsFragment"
+        />
     <fragment
         android:id="@+id/SearchFragment"
         android:name="com.aya.newsapp.presentation.fragment.SearchFragment"
@@ -38,6 +41,8 @@
         android:id="@+id/DetailsFragment"
         android:name="com.aya.newsapp.presentation.fragment.DetailsFragment"
         tools:layout="@layout/details_fragment"
-        />
+        >
+
+    </fragment>
 
 </navigation>

@@ -23,6 +23,6 @@ class NewsDataBaseRepository(val newsDao : NewsDataBaseDao) {
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun update(news: ArticlesTable){
-        newsDao.updateNews(news)
+        newsDao.deleteNews(news)
     }
 }
